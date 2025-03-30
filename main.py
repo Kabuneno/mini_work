@@ -1,26 +1,21 @@
 from datasets import load_dataset, concatenate_datasets, Dataset, Audio, DatasetDict
 from scipy.io.wavfile import write
 
-from datasets import load_dataset
-import os
 import soundfile as sf
 import numpy as np
 from tqdm import tqdm
 
 import os
 import torch
-import numpy as np
-from datasets import load_dataset
+
 from transformers import AutoModelForSpeechSeq2Seq, AutoProcessor, Trainer, TrainingArguments
 from dataclasses import dataclass
 from typing import Dict, List, Union, Any
-from transformers import AutoModelForSpeechSeq2Seq
 import os
 import torch
 from datasets import load_dataset, Audio
 from transformers import AutoModelForSpeechSeq2Seq, AutoProcessor, Trainer, TrainingArguments
-from dataclasses import dataclass
-from typing import Dict, List, Union
+
 from typing import Any, Dict, List, Union
 
 # В
@@ -49,7 +44,7 @@ for i, example in tqdm(enumerate(hui), desc="Сохранение аудиофа
     file_name = os.path.join(save_path, f"{i}.wav")
     write(file_name, sampling_rate, audio_array)
 
-print(f"✅ Все {2} аудиофайлов сохранены в папке {save_path}")
+print(f" Все {2} аудиофайлв сохранены в папке {save_path}")
 
 
 
